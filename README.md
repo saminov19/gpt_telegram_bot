@@ -1,62 +1,43 @@
-#  <p align ="center" height="40px" width="40px"> 🧠💬🤖 AutoGPT-Telegram-bot </p>
+# Chatbot with OpenAI and Telegram Integration
 
-##  <p align ="center" height="40px" width="40px"> AutoGPT Telegram Bot is a Python-based chatbot developed for a self-learning project. It leverages the power of OpenAI's GPT language model to answer user questions and maintain conversation history for more accurate responses..</p>
+This Python script demonstrates how to create a simple chatbot that integrates with the OpenAI API and Telegram messenger. The chatbot uses OpenAI's language model to generate responses to user messages on Telegram.
 
-### <p align ="center"> Implemented using: </p>
+## Prerequisites
 
-<p align ="center">
-<a href="https://openai.com/" target="_blank" rel="noreferrer">   <img src="https://yt3.googleusercontent.com/UqT_vCkJIn1P2fH1pchr6lbe3xeEekY61h4bUpJkVuityqKOEtUYcNy3pLiJ5OKdj4uKA81FWE8=s900-c-k-c0x00ffffff-no-rj" width="32" height="32" /></a>
-<a href="https://www.python.org/" target="_blank" rel="noreferrer">   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png" width="32" height="32" /></a>
-<a href="https://web.telegram.org/k/" target="_blank" rel="noreferrer">   <img src="https://www.pngkit.com/png/detail/897-8972864_telegram-telegram-logo-png.png" width="32" height="32" /></a>
-</p>
+Before running the script in a Docker container, ensure you have the following:
 
-<br>
+1. Docker Installed: You'll need Docker installed on your system to build and run the container.
 
-### <p align ="center"> Do remember to star ⭐ the repository if you like what you see!</p>
+2. OpenAI API Key: You'll need an API key from OpenAI to access their language models. Replace `"YOUR_OPENAI_API_KEY"` in the Dockerfile with your actual API key.
 
-<br>
+3. Telegram Bot Token: Create a bot on Telegram and obtain a bot token. Replace `"YOUR_TELEGRAM_API_KEY"` in the Dockerfile with your bot's token.
 
-##     <p align = "left"> Features </p>
-- Seamless integration with Telegram: The bot interacts with users through the Telegram messaging platform, allowing them to ask questions and receive automated responses.
-- OpenAI GPT integration: By leveraging the OpenAI GPT API, the bot generates accurate and context-aware responses to a wide range of user queries.
-- Conversation history: The bot keeps track of previous messages to maintain context and provide more coherent and relevant replies.
-- Data serialization: The program utilizes the pickle module for efficient and secure data serialization, enabling the storage and retrieval of conversation history.
-- Simple and beginner-friendly: The project is designed to be straightforward, making it accessible to beginners in Python programming and natural language processing.
+## Usage
 
+1. Clone this repository to your local machine.
 
-##     <p align = "left"> Prerequisites </p>
-Before running the bot, make sure you have the following dependencies installed:
-- Python 3.x
-- pickle library: Install using pip install 'pickle'
-- openai library: Install using pip install 'openai'
-- telebot library: Install using pip install 'telebot'
+2. Navigate to the directory containing the Dockerfile and Python script.
+
+3. Build the Docker container:
+
+   ```
+   docker build -t chatbot
+   ```
 
 
-##     <p align = "left"> How to use </p>
-1. Clone the repository to your local machine:   git clone https://github.com/NadavIs56/autogpt-telegram-bot.git
 
-2. Navigate to the project directory:   cd autogpt-telegram-bot
+Run the Docker container:
 
-3. Configure the bot:
-   - Obtain an API key from the OpenAI GPT API.
-   - obtain an API key from the BotFater Telegram bot.
+```
+docker run chatbot
+```
 
-4. python autoGPT_Telegram-bot.py
+The Docker container will start, and your chatbot will be active, listening for messages on Telegram.
 
-5. Enter the Sudoku puzzle:   
-   - Provide 9 lines of input, each containing 9 digits separated by a space.
-   - Press enter after each line.
+## Important Notes
 
-6. Start a conversation with the bot on Telegram and ask your questions. The bot will respond with generated answers based on the OpenAI GPT model, taking into account the conversation history to provide relevant replies.
+Ensure you replace "YOUR_OPENAI_API_KEY" and "YOUR_TELEGRAM_API_KEY" in the Dockerfile with your actual API keys.
 
-##     <p align = "left"> Contribution </p>
-If you have any ideas, improvements, or bug fixes, please submit a pull request. Your contributions can help enhance the project and make it even more valuable for users.
+This script is a basic example and can be extended to handle more complex chatbot functionalities.
 
-
-##     <p align = "left"> Acknowledgements </p>
-- The AutoGPT Telegram Bot project utilizes the OpenAI GPT language model, a powerful tool for generating human-like text.
-- Special thanks to OpenAI for providing the GPT API and to the developers of the telebot library for simplifying Telegram bot integration.
-
-<br>
-
-### <p align ="center"> Do remember to star ⭐ the repository if you like what you see!</p>
+Monitor the performance of your chatbot and make necessary adjustments based on your requirements.
